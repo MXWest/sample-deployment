@@ -1,0 +1,14 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: get-url-demo
+  labels:
+    app: get-url-demo
+spec:
+    template:
+        spec:
+          containers:
+          - name: get-url-demo
+            image: docker.io/mxwest/mike-1:latest
+            imagePullPolicy: IfNotPresent
+          restartPolicy: Never
